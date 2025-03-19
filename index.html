@@ -5,7 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Library</title>
         <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
-    <body></body>
+    <body>
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </table>
+        <dialog>
+            <button class="close">X</button>
+            <form action="">
+                <label for="title">
+                    Title:
+                    <input type="text" />
+                </label>
+
+                <label for="author">
+                    Author:
+                    <input type="text" />
+                </label>
+                <button type="submit" class="add">Add</button>
+            </form>
+        </dialog>
+        <button class="open">Add Book</button>
+    </body>
 </html>

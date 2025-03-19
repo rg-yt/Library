@@ -1,0 +1,17 @@
+dialog .close {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: rgb(223, 133, 117);
+    color: white;
+}
+dialog .add {
+    width: 100%;
+    margin-top: 10px;
+    background-color: lightgreen;
+}
+
+input {
+    display: block;
+    margin: 5px 0;
+}
