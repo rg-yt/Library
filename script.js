@@ -3,6 +3,7 @@ const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".open");
 const closeButton = document.querySelector(".close");
 const addButton = document.querySelector(".add");
+const form = document.querySelector("form");
 const myLibrary = [];
 
 function Book(title, author) {
@@ -16,6 +17,7 @@ function addBookToLibrary(title, author) {
 }
 
 function showBooks() {
+    
     for (var book of myLibrary) {
         var row = document.createElement("tr");
         var title = document.createElement("td");
@@ -38,6 +40,19 @@ closeButton.addEventListener("click", () => {
 
 addButton.addEventListener("click", (e) => {
     e.preventDefault();
+    const title = document.querySelector("#title");
+    const author = document.querySelector("#author");
+    if (title.value && author.value) {
+        addBookToLibrary(title.value, author.value);
+        while (table.childNodes.length !== 2) {
+            table.removeChild(table.lastChild);
+        } 
+    }
+    while (table.childNodes.length !== 2) {
+        table.removeChild(table.lastChild);
+    } 
+    showBooks();
+    form.reset();
 });
 
 
